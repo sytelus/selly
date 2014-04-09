@@ -1,0 +1,10 @@
+<TAb METADATA1 TYPE="TypeLib" NAME="Microsoft ActiveX Data Objects 2.0 Library" UUID="{00000200-0000-0010-8000-00AA006D2EA4}" VERSION="2.0"-->
+
+<!-- #INCLUDE FILE="sessioninit.inc" -->
+
+<SCRIPT LANGUAGE='VBScript' RUNAT='Server'> 
+Sub Session_OnStart
+	'Reaon to put in session is that it allows quick preview without restarting web server under Win98
+	 Call InitSession()
+End Sub
+</SCRIPT>

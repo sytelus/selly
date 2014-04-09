@@ -1,0 +1,23 @@
+		<TR><TD CLASS="Top">Blood Group</TD><TD CLASS="Top">&nbsp;:&nbsp;</TD><TD CLASS="Top"><% Response.Write(AlternateIfBlank(rsPatient("BLOODGROUP"),"Not Available"))  %></TD></TR>
+		<TR><TD CLASS="Top">Allergies</TD><TD CLASS="Top">&nbsp;:&nbsp;</TD><TD CLASS="Top"><% Response.Write(AlternateIfBlank(rsPatient("ALLERGIES"), "Not Available"))  %></TD></TR>
+
+		
+				<!-- Output patient detail -->
+		<TABLE border=0>
+		<TR><TD CLASS="Top">Name</TD><TD CLASS="Top">&nbsp;:&nbsp;</TD><TD CLASS="Top"><% Response.Write(sName) %></TD></TR>
+		<TR><TD CLASS="Top">DOB</TD><TD CLASS="Top">&nbsp;:&nbsp;</TD><TD CLASS="Top"><% Response.Write(sDOB) %></TD></TR>
+		<TR><TD CLASS="Top">Gender</TD><TD CLASS="Top">&nbsp;:&nbsp;</TD><TD CLASS="Top"><% Response.Write(sGender)  %></TD></TR>
+		<TR><TD CLASS="Top">Address</TD><TD CLASS="Top">&nbsp;:&nbsp;</TD><TD CLASS="Top"><% Response.Write(sAddress)  %></TD></TR>
+		<TR><TD CLASS="Top">Telephones</TD><TD CLASS="Top">&nbsp;:&nbsp;</TD><TD CLASS="Top"><% Response.Write(sTelephones)  %></TD></TR>
+		<TR><TD CLASS="Top">Next Of Kin</TD><TD CLASS="Top">&nbsp;:&nbsp;</TD><TD CLASS="Top"><% Response.Write(AlternateIfBlank(rsPatient("NEXT_OF_KIN"),"Not Available"))  %></TD></TR>
+		<TR><TD CLASS="Top">Contacts Of Next Of Kin</TD><TD CLASS="Top">&nbsp;:&nbsp;</TD><TD CLASS="Top"><% Response.Write(AlternateIfBlank(rsPatient("TELE_NEXT_OF_KIN"),"Not Available"))  %></TD></TR>
+		</TABLE>
+
+		
+						<TR><TD CLASS="Top">Next Of Kin</TD><TD CLASS="Top">&nbsp;:&nbsp;</TD><TD CLASS="Top"><% Response.Write(AlternateIfBlank(rsPatient("NEXT_OF_KIN"),"Not Available"))  %></TD></TR>
+				<TR><TD CLASS="Top">Contacts Of Next Of Kin</TD><TD CLASS="Top">&nbsp;:&nbsp;</TD><TD CLASS="Top"><% Response.Write(AlternateIfBlank(rsPatient("TELE_NEXT_OF_KIN"),"Not Available"))  %></TD></TR>
+
+				
+						<!-- #INCLUDE FILE="winupperpart.inc" -->
+			<IMG ALIGN="RIGHT" SRC="<% Response.Write("patientphotos\" & rsPatient("PHOTO")) %>" BORDER=2 ALT="<% Response.Write("Patient: " & sName) %>">
+		<!-- #INCLUDE FILE="winlowerpart.inc" -->		
